@@ -1,0 +1,26 @@
+### Recomendación
+1. Instalación Anaconda
+2. Crear entorno virtual en la carpteta
+
+```bash
+conda deactivate
+pip install virtualenv
+virtualenv ./venv
+source venv/bin/activate
+pip install --upgrade pip
+echo "./venv" >> .gitignore
+rm requirements.txt
+echo "jupyterlab" >> requirements.txt
+echo "pandas" >> requirements.txt
+echo "seaborn" >> requirements.txt
+pip install -r requirements.txt
+pip freeze > requirements.txt
+mkdir notebooks notebooks/data
+
+```
+
+
+3. Levantar servidor de jupyter
+
+```bash
+jupyter lab --port=10001 --no-browser --ip=0.0.0.0 --allow-root --ServerApp.token="01artificial"
